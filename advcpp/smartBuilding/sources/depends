@@ -1,0 +1,10 @@
+test.o: test.cpp ../../include/mu_test.h ../include/Server.h \
+ ../../include/commons.h ../include/EventQueue.h ../include/IDequeue.h \
+ ../include/IEnqueue.h ../../include/WaitableQueue.h \
+ ../../include/Mutex.h ../../include/exceptions.h ../../include/commons.h \
+ ../../include/Uncopyable.h ../../include/ConditionVariable.h \
+ ../include/dispEvent.h ../include/eventPub.h ../../include/IRunnable.h \
+ ../include/SubRegister.h ../include/ISubLookUp.h ../include/ISubsribe.h \
+ ../include/serialPub.h ../include/IPubMech.h ../include/AgentFactory.h \
+ ../include/ID.h ../include/Type.h ../include/Location.h \
+ ../include/Room.h ../include/Floor.h ../include/Reader.h

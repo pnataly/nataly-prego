@@ -1,0 +1,2 @@
+Level = LOG_ERROR
+File = ~/work/advanceC/logger/dbLog.c

@@ -1,0 +1,31 @@
+
+agents = 
+{
+	agent =
+	(	
+		{	lib = "../lib/libSS.so";
+			id = "1"
+			type = "smoke";
+			room = "1_a";
+			floor = "2.5";},
+	
+		{	lib = "../lib/libFS.so"
+			id = "2"
+			type = "fire";
+			room = "2_b";
+			floor = "3";},
+
+		{	lib = "../lib/libSC.so"
+			id = "3"
+			type = "smoke";
+			room = "1_a";
+			floor = "2.5";},
+
+		{	lib = "../lib/libFC.so"
+			id = "4"
+			type = "fire";
+			room = "2_b";
+			floor = "3";}
+	);
+};
+
