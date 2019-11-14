@@ -1,0 +1,306 @@
+	#command line:
+
+xdg-open file_name --> open the file.
+
+rm -r folder_name /rmdir folder_name  --> delete a directory.
+
+mv old_name new_name --> delete a file/directory.
+
+	#intro to Front-End
+	
+Each of these languages performs a separate but very important function and they work harmoniously together to determine how the web page is STRUCTURED (HTML), how it LOOKS (CSS), and how it FUNCTIONS (JavaScript). And keep in mind that your browser handles figuring out how to make these files into a functioning web page (not the server).
+
+HTML, meaning “HyperText Markup Language”, is a document format used for defining the semantic structure of a single web page:
+
+	- A markup language is a computer language that defines the structure and presentation of raw text.
+	- In HTML, the computer can interpret raw text that is wrapped in HTML elements.
+	- HyperText is text displayed on a computer or device that provides access to other text through links, also known as hyperlinks. 		You probably clicked on a couple of hyperlinks on your way to this Codecademy course.
+
+	#The body - 
+	One of the key HTML elements we use to build a webpage is the body element. Only content inside the opening and closing body tags 		can be displayed to the screen.
+	Once the file has a body, many different types of content – including text, images, and buttons – can be added to the body. 
+	
+	#Divs - 
+	One of the most popular elements in HTML is the <div> element. <div> is short for “division” or a container that divides the page 		into sections. These sections are very useful for grouping elements in your HTML together. 
+	
+	#Styling Text - 
+	
+    The <em> tag will generally render as italic emphasis.
+    The <strong> will generally render as bold emphasis.
+    
+    #Unordered List -
+    In HTML, you can use an unordered list tag (<ul>) to create a list of items in no particular order. An unordered list outlines 		  individual list items with a bullet point.The <ul> element should not hold raw text and won’t automatically format raw text into an unordered list of items. Individual list items must be added to the unordered list using the <li> tag. The <li> or list item tag is used to describe an item in a list.
+    
+    #Ordered Lists - 
+
+Ordered lists (<ol>) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last. 
+
+	#The Head -
+	The <head> element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the <body> tag, the metadata in the head is information about the page itself. You’ll see an example of this in the next exercise. The opening and closing head tags typically appear as the first item after your first HTML tag.
+	inside the head - <title> the page name </title>
+	
+	#Link to other websites - 
+	For a link to open in a new window, the target attribute requires a value of _blank. The target attribute can be added directly to 		the opening tag of the anchor element, just like the href attribute.
+	<a href="https://www.wikipedia.org/" target="_blank">This Is A Link To Wikipedia</a>
+	
+	#Comments - 
+	<!-- and end with -->
+	
+
+    The <table> element creates a table.
+    The <tr> element adds rows to a table.
+    To add data to a row, you can use the <td> element.
+    Table headings clarify the meaning of data. Headings are added with the <th> element.
+    Table data can span columns using the colspan attribute.
+    Table data can span rows using the rowspan attribute.
+    Tables can be split into three main sections: a head, a body, and a footer.
+    A table’s head is created with the <thead> element.
+    A table’s body is created with the <tbody> element.
+    A table’s footer is created with the <tfoot> element.
+    All the CSS properties you learned about in this course can be applied to tables and their data.
+    
+    #Forms - 
+    
+    The purpose of a <form> is to allow users to input information and send it.
+    The <form>‘s action attribute determines where the form’s information goes.
+    The <form>‘s method attribute determines how the information is sent and processed.
+    To add fields for users to input information we use the <input> element and set the type attribute to a field of our choosing:
+        Setting type to "text" creates a single row field for text input.
+        Setting type to "password" creates a single row field that censors text input.
+        Setting type to "number" creates a single row field for number input.
+        Setting type to "range" creates a slider to select from a range of numbers.
+        Setting type to "checkbox" creates a single checkbox which can be paired with other checkboxes.
+        Setting type to "radio" creates a radio button that can be paired with other radio buttons.
+        Setting type to "list" will pair the <input> with a <datalist> element.
+        Setting type to "submit" creates a submit button.
+    A <select> element is populated with <option> elements and renders a dropdown list selection.
+    A <datalist> element is populated with <option> elements and works with an <input> to search through choices.
+    A <textarea> element is a text input field that has a customizable area.
+    When a <form> is submitted, the name of the fields that accept input and the value of those fields are sent as name=value pairs.
+
+	#Validation Review
+
+    Client-side validations happen in the browser before information is sent to a server.
+    Adding the required attribute to an input related element will validate that the input field has information in it.
+    Assigning a value to the min attribute of a number input element will validate an acceptable minimum value.
+    Assigning a value to the max attribute of a number input element will validate an acceptable maximum value.
+    Assigning a value to the minlength attribute of a text input element will validate an acceptable minimum number of characters.
+    Assigning a value to the maxlength attribute of a text input element will validate an acceptable maximum number of characters.
+    Assigning a regex to pattern matches the input to the provided regex.
+    If validations on a <form> do not pass, the user gets a message explaining why and the <form> cannot be submitted.
+    
+    #Semantic HTM -
+    Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.
+    Semantic HTML is a modern standard and makes a website accessible for people who use screen readers to translate the webpage and improves your website’s SEO.
+    <header>, <nav> , <main> and <footer> create the basic structure of the webpage.
+    <section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme.
+    <article> holds content that makes sense on its own such as articles, blogs, comments, etc.
+    <aside> contains information that is related to the main content, but not required in order to understand the dominant information.
+    <figure> encapsulates all types of media.
+    <figcaption> is used to describe the media in <figure>.
+    <video>, <embed>, and <audio> elements are used for media files.
+
+	#CSS- Cascading Styles Sheets
+	IDs are the most specific selector in CSS, followed by classes, and finally, tags.
+	!important can be applied to specific attributes instead of full rules. It will override any style no matter how specific it is.
+	
+    CSS can change the look of HTML elements. In order to do this, CSS must select HTML elements, then apply styles to them.
+    CSS can select HTML elements by tag, class, or ID.
+    Multiple CSS classes can be applied to one HTML element.
+    Classes can be reusable, while IDs can only be used once.
+    IDs are more specific than classes, and classes are more specific than tags. That means IDs will override any styles from a class, and classes will override any styles from a tag selector.
+    Multiple selectors can be chained together to select an element. This raises the specificity, but can be necessary.
+    Nested elements can be selected by separating selectors with a space.
+    The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.
+    Multiple unrelated selectors can receive the same styles by separating the selector names with commas.
+
+	#Review Visual Rules
+
+    CSS declarations are structured into property and value pairs.
+    The font-family property defines the typeface of an element.
+    font-size controls the size of text displayed.
+    font-weight defines how thin or thick text is displayed.
+    The text-align property places text in the left, right, or center of its parent container.
+    Text can have two different color attributes: color and background-color. color defines the color of the text, while background-color defines the color behind the text.
+    CSS can make an element transparent with the opacity property.
+    CSS can also set the background of an element to an image with the background-image property.
+
+	#The Box Model-
+
+	padding- The space between the contents of a box and the borders of a box.
+	margin- Margin refers to the space directly outside of the box.
+	
+    The box model comprises a set of properties used to create space around and between HTML elements.
+    The height and width of a content area can be set in pixels or percentage.
+    Borders surround the content area and padding of an element. The color, style, and thickness of a border can be set with CSS properties.
+    Padding is the space between the content area and the border. It can be set in pixels or percent.
+    Margin is the amount of spacing outside of an element’s border.
+    Horizontal margins add, so the total space between the borders of adjacent elements is equal to the sum of the right margin of one element and the left margin of the adjacent element.
+    Vertical margins collapse, so the space between vertically adjacent elements is equal to the larger margin.
+    margin: 0 auto horizontally centers an element inside of its parent content area, if it has a width.
+    The overflow property can be set to display, hide, or scroll, and dictates how HTML will render content that overflows its parent’s content area.
+    The visibility property can hide or show elements.
+
+	#Layout-
+	
+	
+    The position property allows you to specify the position of an element in three different ways.
+    When set to relative, an element’s position is relative to its default position on the page.
+    When set to absolute, an element’s position is relative to its closest positioned parent element. It can be pinned to any part of the web page, but the element will still move with the rest of the document when the page is scrolled.
+    When set to fixed, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what.
+    The z-index of an element specifies how far back or how far forward an element appears on the page when it overlaps other elements.
+    The display property allows you control how an element flows vertically and horizontally a document.
+    inline elements take up as little space as possible, and they cannot have manually-adjusted width or height.
+    block elements take up the width of their container and can have manually-adjusted heights.
+    inline-block elements can have set width and height, but they can also appear next to each other and do not take up their entire container width.
+    The float property can move elements as far left or as far right as possible on a web page.
+    You can clear an element’s left or right side (or both) using the clear property.
+
+	#Typography-
+	
+	Typography is the art of arranging text on a page.
+
+	Text can appear in any number of weights, with the font-weight property.
+
+	Text can appear in italics with the font-style property.
+
+	The vertical spacing between lines of text can be modified with the line-height property.
+
+	Serif fonts have extra details on the ends of each letter. Sans-Serif fonts do not.
+
+	Fallback fonts are used when a certain font is not installed on a user’s computer.
+
+	Google Fonts provides free fonts that can be used in an HTML file with the <link> tag or the @font-face property.
+
+	Local fonts can be added to a document with the @font-face property and the path to the font’s source.
+
+	The word-spacing property changes how far apart individual words are.
+
+	The letter-spacing property changes how far apart individual letters are.
+
+	The text-align property changes the horizontal alignment of text.
+	
+	#Grid - 
+	
+    grid-template-columns
+    grid-template-rows
+    grid-template
+    grid-template-area
+    grid-gap
+    grid-row-start / grid-row-end
+    grid-column-start / grid-column-end
+    grid-area
+
+	grid-template-columns defines the number and sizes of the columns of the grid
+	grid-template-rows defines the number and sizes of the rows of the grid
+	grid-template is a shorthand for defining both grid-template-columns and grid-template-rows in one line
+	grid-gap puts blank space between rows and/or columns of the grid
+	grid-row-start and grid-row-end makes elements span certain rows of the grid
+	grid-column-start and grid-column-end makes elements span certain columns of the grid
+	grid-area is a shorthand for grid-row-start, grid-column-start, grid-row-end, and grid-column-end, all in one line
+	
+	grid-template-areas
+	justify-items
+	justify-content
+	justify-self
+	align-items
+	align-content
+	align-self
+	grid-auto-rows
+	grid-auto-columns
+	grid-auto-flow
+	
+	grid-template-areas specifies grid named grid areas
+	grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.
+	justify-items specifies how individual elements should spread across the row axis
+	justify-content specifies how groups of elements should spread across the row axis
+	justify-self specifies how a single element should position itself with respect to the row axis
+	align-items specifies how individual elements should spread across the column axis
+	align-content specifies how groups of elements should spread across the column axis
+	align-self specifies how a single element should position itself with respect to the column axis
+	grid-auto-rows specifies the height of rows added implicitly to the grid
+	grid-auto-columns specifies the width of columns added implicitly to the grid
+	grid-auto-flow specifies in which direction implicit elements should be created
+
+* Whereas HTML has tags, CSS has selectors.
+
+Text style in css:
+*font-family.
+*font-size.
+*font-weight: normal/bold- or 100-900.
+*font-style: italic/normal.
+*text-decoration: underline/overlive/line-through.
+*text-transform:capitalize/uppercase/lowercase/none.
+-Text spacing:
+	*letter-spacing: _px;
+	*word-spacing: _px;
+	*line-height: number. roperty sets the height of the lines in an element, such as a paragraph, without adjusting the size of the 		font.
+	*text-align: left/right/center/justify(Text aligned both left and right).
+	
+* A margin is the space outside something, whereas padding is the space inside something.
+ *The box model:
+ Margin box
+	Border box
+		Padding box
+			Element box
+			
+*Margin-  margin-top/ margin-right/ margin-bottom/ margin-left.
+*Border- border-width(also- border-top-width,border-right-width,border-bottom-width,border-left-width)/ border-color/ border-style. or in 1 line: border: width (_px) color style(solid,otted,dashed,double,groove,ridge, inset,outset);
+*Padding-  padding-top/ padding-right/ padding-bottom/ padding-left.
+
+*Span VS. div- span element is in-line and usually used for a small chunk of HTML inside a line (such as inside a paragraph) whereas a div (division) element is block-line (which is basically equivalent to having a line-break before and after it) and used to group larger chunks of code.
+
+
+<figure>
+    <img src="obelisk.jpg">
+    <figcaption>Tixall Obelisk</figcaption>
+</figure>
+
+*The following will apply colors to all links in a page depending on whether the user has visited that page before or not:
+
+	a:link {
+	    color: blue;
+	}
+
+	a:visited {
+	    color: purple;
+	}
+	
+*active- is for when something activated by the user, such as when a link is clicked on.
+*hover- is for a when something is passed over by an input from the user, such as when a cursor moves over a link.
+*focus- is for when something gains focus, that is when it is selected by, or is ready for, keyboard input.
+
+
+*Shorthand-
+  p {
+    font: italic bold 14px/1.5 "Times New Roman", times, serif; (font-style, font-weight, font-size, line-height, font-family).
+    padding: 30px 10px; (30 -top and bottom, 10- right and left).
+    border: 1px black solid; (border-width, border-color, border-style). 
+    border-width: 1px 5px 5px 1px; (top, right, bottom, left).
+    border-color: red green blue yellow; (top, right, bottom, left)
+    margin: 10px 50px; (10 -top and bottom, 50- right and left).
+   }
+   
+*background-image:  background: white url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
+(color, background-image, which is the location of the image itself, background-repeat, which is how the image repeats itself. the value- repeat, repeat-y,repeat-x, no-repeat, round,space. background-position, which can be top, center, bottom, left, right, a length, or a percentage, or any sensible combination, such as top right. 
+
+*display: inline/block/none:
+  -inline- will cause all list items in a list to appear next to each other in one continuous line rather than each one having its own line.
+  -block-block makes a box standalone, fitting the entire width of its containing box, with an effective line break before and after it.
+  -none-doesn’t display a box at all.
+
+*Pseudo Elements:
+  -First Letters and First Lines:
+  	p:first-letter {
+    	 font-size: 24px;
+    	 float: left;
+	}
+
+	p:first-line {
+    	 font-weight: bold;
+	}
+	
+  -Before and After Content:
+
+
+
