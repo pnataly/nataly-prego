@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
+    text-align: center;
+    margin: 35px auto 5px auto;
+}
+
+h1{
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+h2{
+    text-align: center;
+    color: blueviolet;
+    font-weight: bold;
+    width: 100%;
+}
+
+.computer {
+    float: right;
+    margin-right: 200px;
+}
+
+.player {
+    float: left;
+    margin-left: 200px;
+    display: inline-block;
+}
+
+.computer, .player {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.score{
+    border-style: none;
+    background-color: white;
+    color: black;
+    padding: 0px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 4px 2px;
+}
+
+.buttons {
+    padding: 0;
+    color: white;
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 200px;
+    border-style: solid;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons:hover, .new-game:hover{
+    transform: scale(1.1);
+}
+
+.new-game{
+    font-size:10px;
+    margin: 35px auto 5px auto;
+    text-align: center;
+    border-radius: 20px;
+    width: 11%;
+    font-size: 20px;
+    display: block;
+    padding: 20px 4px;
+    background-color: blueviolet;
+    color: white;
+    border: solid;
+}
+
+
+.msg{
+    text-align: center;
+    display: inline;
+}
+
+#playerCount {
+    margin-left: 40px;
+}
+
+#computerCount {
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+
+
+.computer-buttons{
+    background-color:white;
+    border-style: solid;
+    border-color: blueviolet;
+    color: black;
+    text-decoration: none;
+    margin: 4px 2px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.container {
+    margin-top: 85px;
+}
+
+
+
+

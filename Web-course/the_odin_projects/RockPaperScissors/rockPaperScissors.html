@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <script src="rps.js"> </script>
+  <link href="style.css"  rel="stylesheet" type="text/css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="getUserName()">
+    <h1> Rock Paper or Scissors? </h1>
+    <h3 > Let's play - best out of 5</h3>
+
+    <div class="player">
+        <div class="icon-player"><i class="fa fa-user" style="font-size:60px;"></i></div>
+        <button class="score">  <p id="playerName"></p>  </button>
+        <p id="playerCount">0</p>      
+        <label id="userChoice" style="font-size:100px;"> </label> 
+    </div>
+
+    
+    <div class="computer">
+        <div class="icon-computer"><i class="fa fa-desktop" style="font-size:60px;"></i></div>
+        <button class="score"><p>Computer</p></button>
+        <p id="computerCount">0</p>
+        <label id="computerChoice" style="font-size:100px;"></label> 
+
+        <div class="computer-buttons"> <span class="fa fa-hand-rock-o"></span></div>
+        <div class="computer-buttons"> <span class="fa fa-hand-paper-o"></span></div>            
+        <div class="computer-buttons"> <span class="fa fa-hand-scissors-o"></span></div>
+    </div>
+    
+    
+    <button id="game" class = "new-game" type="button" onclick="newGame()"> New Game </button> <br>
+
+    <div class="msg"> <h2 id="winMsg"> </h2> </div>
+
+
+    <div class="container">
+        <button class="buttons" id="rock" type="button" onclick="Rock()"> <span class="fa fa-hand-rock-o"></span> </button> <br>
+        <button class="buttons" id="paper" type="button" onclick="Paper()"> <span class="fa fa-hand-paper-o"> </button> <br>
+        <button class="buttons" id="scissors" type="button" onclick="Scissors()"> <span class="fa fa-hand-scissors-o"></span></button>
+    </div>
+
+</body>
+</html>
