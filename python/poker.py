@@ -1,22 +1,93 @@
 import random
 
-def poker(hands):
-    "Return a list of winning hands: poker([hand,...]) => [hand...]"
-    return allmax(hands, key=hand_rank)
+# def poker(hands):
+#     "Return a list of winning hands: poker([hand,...]) => [hand...]"
+#     return allmax(hands, key=hand_rank)
+
+def poker(numOfHands, players, n=5):
+    #"Return a list of winning hands: poker([hand,...]) => [hand...]"
+    hands = deal(numOfHands, n)
+    for i in xrange(numOfHands):
+      print players[i] + " hand: " + str(hands[i])
+    #print hands
+    win = allmax(hands, key=hand_rank)
+    #print win
+    get_winner(numOfHands, hands, players)
+    # player_rank = []
+    # print "==============Result=============="
+    # for i in xrange(numOfHands):
+    #     player_rank.append(hand_rank(hands[i]))
+    #     if player_rank[i][0] == 0:
+    #         print "Player "+ str(i+1)+" have: High card"
+    #     elif player_rank[i][0] == 1:
+    #         print "Player "+str(i+1)+" have: One pair"
+    #     elif player_rank[i][0] == 2:
+    #         print "Player "+str(i+1)+" have: Two pair"
+    #     elif player_rank[i][0] == 3:
+    #         print "Player "+str(i+1)+" have: Three of a kind"
+    #     elif player_rank[i][0] == 4:
+    #         print "Player "+str(i+1)+" have: Straight"
+    #     elif player_rank[i][0] == 5:
+    #         print "Player "+str(i+1)+" have: Flush"
+    #     elif player_rank[i][0] == 6:
+    #         print "Player "+str(i+1)+" have: Full house"
+    #     elif player_rank[i][0] == 7:
+    #         print "Player "+str(i+1)+" have: Four of a kind"
+    #     elif player_rank[i][0] == 8:
+    #         print "Player "+str(i+1)+" have: Straight flush"
+    #     elif player_rank[i][0] == 9:
+    #        print "Player "+str(i+1)+" have: Royal straight flush"
+    if len(win[0]) > 1:
+        return  "-- >" + 'Winner are players: ' + str(str(win[0])) + " < --"
+    return "-- > The Winner is player: " + players[win[0][0]] + " < --"
+    #return player_rank
+    #print win
+
+
+def get_winner(numOfPlayers, hands, players):
+  player_rank = []
+  print "==============Result=============="
+  for i in xrange(numOfPlayers):
+      player_rank.append(hand_rank(hands[i]))
+      if player_rank[i][0] == 0:
+          print players[i]+" have: High card" 
+      elif player_rank[i][0] == 1:
+          print players[i]+" have: One pair"
+      elif player_rank[i][0] == 2:
+          print players[i]+" have: Two pair"
+      elif player_rank[i][0] == 3:
+          print players[i]+" have: Three of a kind"
+      elif player_rank[i][0] == 4:
+          print players[i]+" have: Straight"
+      elif player_rank[i][0] == 5:
+          print players[i]+" have: Flush"
+      elif player_rank[i][0] == 6:
+          print players[i]+" have: Full house"
+      elif player_rank[i][0] == 7:
+          print players[i]+" have: Four of a kind"
+      elif player_rank[i][0] == 8:
+          print players[i]+" have: Straight flush"
+      elif player_rank[i][0] == 9:
+          print players[i]+" have: Royal straight flush"
 
 def allmax(iterable, key=None):
     "Return a list of all items equal to the max of the iterable"
     result = []
+    players = []
     maxVal = None
     key = key or (lambda x: x)
+    i = 0
     for x in iterable:
       xVal = key(x)
       if not result or xVal > maxVal:
         result = [x]
+        players = [i]
         maxVal = xVal
       elif xVal == maxVal:
         result.append(x)
-    return result
+        players.append(i)
+      i = i+1
+    return players,maxVal
 
 def deal(numOfHands, n=5, deck=[r+s for r in '23456789TJQKA' for s in 'SHDC']):
   "Shuffle the deck and deal out numOfHands n-cards hands"
@@ -73,5 +144,40 @@ def test():
 
   return "test pass"
 
-print test()
+#print test()
 
+while(True):
+  players = []
+  round = 0
+  mode = raw_input("\nWelcome to the Poker Game!\n[+] Select Mode [+]\n 1.)Start Game\n 2.)Exit \nInput number : ")
+  if mode.isdigit() and (mode == '1' or mode == '2'):
+    if mode == '1':
+      select = raw_input("\n[+] select number of players: [+]\n 1.)2 players\n 2.)3 players\n 3.)4 players \nInput number : ")
+      if select.isdigit() and (select == '2' or select == '3' or select == '4'):
+        for i in xrange(int(select)):
+          name = raw_input("\nEnter you name : \n Player" + str(i+1) + " name: ")
+          players.append(name)
+        round = round + 1
+        print '==============Poker Start - Round ' + str(round) + '=============='
+        print poker(int(select), players)
+
+        answer = raw_input("\nDo you Want to play again ? (Y/N): \n").upper()
+        while(answer == 'Y'):
+          round = round + 1
+        #if answer == 'Y':
+          print '==============Poker Start - Round ' + str(round) + '=============='
+          print poker(int(select), players)
+          answer = raw_input("\nDo you Want to play again ? (Y/N): \n").upper()
+          ##loop of the question - play again? (Y/N)
+
+      else:
+          print "****** please Input number 2-4 !! ******"
+    else:
+      print "\nBye Bye...\nThank you for playing!"
+      break
+  else:
+    print "****** please Input number 1-2 !! ******"
+
+
+
+## add input for all player names.
